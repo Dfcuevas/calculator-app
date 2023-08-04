@@ -1,42 +1,71 @@
-#root {
-  max-width: 1280px;
-  margin: 0 auto;
-  padding: 2rem;
-  text-align: center;
+html {
+  box-sizing: border-box;
+  font-size: 32px;
 }
 
-.logo {
-  height: 6em;
-  padding: 1.5em;
-  will-change: filter;
-  transition: filter 300ms;
-}
-.logo:hover {
-  filter: drop-shadow(0 0 2em #646cffaa);
-}
-.logo.react:hover {
-  filter: drop-shadow(0 0 2em #61dafbaa);
+*,
+*::before,
+*::after {
+  box-sizing: inherit;
+  margin: 0;
+  padding: 0;
 }
 
-@keyframes logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
+body {
+  font-family: "League Spartan", sans-serif;
+  height: 100vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
 }
 
-@media (prefers-reduced-motion: no-preference) {
-  a:nth-of-type(2) .logo {
-    animation: logo-spin infinite 20s linear;
-  }
+main {
+  width: 375px;
 }
 
-.card {
-  padding: 2em;
+.container-calc {
+  background-color: var(--main-bg);
+  padding: 25px;
 }
 
-.read-the-docs {
-  color: #888;
+.container-calc h1 {
+  color: var(--white-text);
+  font-size: 1rem;
+  margin-bottom: 20px;
+}
+
+.screen-section {
+  width: 100%;
+  background-color: var(--screen-bg);
+  border-radius: 8px;
+  color: var(--white-text);
+  padding: 15px;
+  text-align: right;
+  margin-bottom: 30px;
+}
+
+.keys-section {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 5px;
+  border-radius: 8px;
+  background-color: var(--toggleKeypad-bg);
+  color: var(--white-text);
+}
+
+.keys-section > div {
+  cursor: pointer;
+}
+
+.primary-key {
+  background-color: var(--key-bg-orange);
+  color: var(--very-dark-blue);
+}
+
+.secondary-key {
+  background-color: var(--key-bg);
+}
+
+.equal-key {
+  background-color: var(--red);
 }

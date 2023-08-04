@@ -1,35 +1,34 @@
-import { useState } from 'react'
-import reactLogo from './assets/react.svg'
-import viteLogo from '/vite.svg'
-import './App.css'
+import { useState } from "react";
+import "./App.css";
 
 function App() {
-  const [count, setCount] = useState(0)
-
+  const [screen, setScreen] = useState(0);
   return (
-    <>
-      <div>
-        <a href="https://vitejs.dev" target="_blank">
-          <img src={viteLogo} className="logo" alt="Vite logo" />
-        </a>
-        <a href="https://react.dev" target="_blank">
-          <img src={reactLogo} className="logo react" alt="React logo" />
-        </a>
-      </div>
-      <h1>Vite + React</h1>
-      <div className="card">
-        <button onClick={() => setCount((count) => count + 1)}>
-          count is {count}
-        </button>
-        <p>
-          Edit <code>src/App.jsx</code> and save to test HMR
-        </p>
-      </div>
-      <p className="read-the-docs">
-        Click on the Vite and React logos to learn more
-      </p>
-    </>
-  )
+    <main className="container-calc">
+      <h1>calc</h1>
+      <section className="screen-section">{screen}</section>
+      <section className="keys-section">
+        <div className="primary-key">7</div>
+        <div className="primary-key">8</div>
+        <div className="primary-key">9</div>
+        <div className="secondary-key">DEL</div>
+        <div className="primary-key">4</div>
+        <div className="primary-key">5</div>
+        <div className="primary-key">6</div>
+        <div className="primary-key">+</div>
+        <div className="primary-key">1</div>
+        <div className="primary-key">2</div>
+        <div className="primary-key">3</div>
+        <div className="primary-key">-</div>
+        <div className="primary-key">.</div>
+        <div className="primary-key">0</div>
+        <div className="primary-key">/</div>
+        <div className="primary-key">x</div>
+        <div className="secondary-key">RESET</div>
+        <div className="equal-key">=</div>
+      </section>
+    </main>
+  );
 }
 
-export default App
+export default App;
