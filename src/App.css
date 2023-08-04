@@ -17,6 +17,7 @@ body {
   display: flex;
   align-items: center;
   justify-content: center;
+  font-weight: 700;
 }
 
 main {
@@ -46,26 +47,45 @@ main {
 
 .keys-section {
   display: grid;
-  grid-template-columns: repeat(4, 1fr);
-  gap: 5px;
+  padding: 15px;
+  grid-template-columns: repeat(4, 65px);
+  grid-template-rows: repeat(5, 65px);
+  gap: 10px;
   border-radius: 8px;
   background-color: var(--toggleKeypad-bg);
   color: var(--white-text);
+  justify-items: center;
+  justify-content: center;
 }
 
 .keys-section > div {
+  border-radius: 8px;
   cursor: pointer;
+  display: grid;
+  place-items: center;
+  padding: 8px;
+  font-size: 0.6rem;
 }
 
 .primary-key {
   background-color: var(--key-bg-orange);
   color: var(--very-dark-blue);
+  justify-self: stretch;
 }
 
 .secondary-key {
   background-color: var(--key-bg);
+  justify-self: stretch;
+}
+
+.reset {
+  grid-column-start: 1;
+  grid-column-end: 3;
 }
 
 .equal-key {
   background-color: var(--red);
+  grid-column-start: 3;
+  grid-column-end: 5;
+  justify-self: stretch;
 }
