@@ -50,7 +50,7 @@ main {
   padding: 15px;
   grid-template-columns: repeat(4, 65px);
   grid-template-rows: repeat(5, 65px);
-  gap: 10px;
+  gap: 13px;
   border-radius: 8px;
   background-color: var(--toggleKeypad-bg);
   color: var(--white-text);
@@ -71,11 +71,21 @@ main {
   background-color: var(--key-bg-orange);
   color: var(--very-dark-blue);
   justify-self: stretch;
+  box-shadow: 0px 5px 1px 0px var(--key-shadow-orange);
+}
+
+.primary-key:active {
+  background-color: var(--key-shadow-orange);
 }
 
 .secondary-key {
   background-color: var(--key-bg);
   justify-self: stretch;
+  box-shadow: 0px 5px 1px 0px var(--key-shadow);
+}
+
+.secondary-key:active {
+  background-color: var(--key-shadow);
 }
 
 .reset {
@@ -88,4 +98,9 @@ main {
   grid-column-start: 3;
   grid-column-end: 5;
   justify-self: stretch;
+  box-shadow: 0px 5px 1px 0px var(--key-shadow-red);
+}
+
+.equal-key:active {
+  background-color: var(--key-shadow-red);
 }
